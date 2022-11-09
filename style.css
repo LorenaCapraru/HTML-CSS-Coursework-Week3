@@ -126,7 +126,7 @@ footer {
   gap: 5px;
 }
 footer p {
-  font-size: 0.6em;
+  font-size: 16px;
 }
 
 /*media query for tablet*/

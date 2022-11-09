@@ -8,7 +8,7 @@ body {
 .index-main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100px 400px 250px 200px 50px;
+  grid-template-rows: 0.2fr 0.7fr 0.5fr 0.7fr 0.2fr;
   gap: 2em;
   grid-template-areas:
     "hero hero"
@@ -112,6 +112,22 @@ h1 {
 i.fa.fa-bars::before {
   color: rgb(133, 120, 120);
 }
+footer {
+  grid-area: footer;
+  background-color: rgb(186, 219, 208);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+footer p {
+  font-size: 0.6em;
+}
 
 /*media query for tablet*/
 @media screen and (min-width: 540px) {
@@ -133,14 +149,11 @@ i.fa.fa-bars::before {
   .motto {
     flex-direction: column;
     align-items: flex-end;
-    margin-bottom: 5em;
   }
-}
-@media screen and (min-width: 900px) {
   .index-main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 20% 40% 20% 20%;
+    grid-template-rows: 0.3fr 0.8fr 0.3fr 0fr;
     gap: 2em;
     grid-template-areas:
       "hero hero hero hero"
@@ -159,6 +172,10 @@ i.fa.fa-bars::before {
     border-radius: 1em;
     margin: 0;
   }
+  .topnav {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 
   .topnav a {
     background-color: rgb(186, 219, 208);
@@ -168,6 +185,63 @@ i.fa.fa-bars::before {
     flex-wrap: nowrap;
   }
   .index-products img {
-    width: 25%;
+    width: 22%;
+  }
+  .index-description {
+    margin-right: 2em;
+  }
+  .index-description-picture {
+    margin-left: 2em;
+  }
+  .index-products {
+    margin: 2em;
+  }
+}
+@media screen and (min-width: 900px) {
+  .index-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr 1fr 0.5fr 0.2fr;
+    gap: 2em;
+    grid-template-areas:
+      "hero hero hero hero"
+      "d-picture d-picture description description"
+      "products products products products"
+      "footer footer footer footer";
+  }
+  .motto img {
+    align-self: flex-start;
+  }
+  .motto p {
+    margin: 0;
+  }
+  .index-description {
+    font-size: 1.5em;
+    border-radius: 1em;
+    margin: 0;
+  }
+  .topnav {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .topnav a {
+    background-color: rgb(186, 219, 208);
+    margin: 10px;
+  }
+  .index-products {
+    flex-wrap: nowrap;
+  }
+  .index-products img {
+    width: 22%;
+  }
+  .index-description {
+    margin-right: 2em;
+  }
+  .index-description-picture {
+    margin-left: 2em;
+  }
+  .index-products {
+    margin: 2em;
   }
 }

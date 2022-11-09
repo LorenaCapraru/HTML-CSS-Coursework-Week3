@@ -8,13 +8,14 @@ body {
 .index-main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100px 300px 250px 200px;
+  grid-template-rows: 100px 400px 250px 200px 50px;
   gap: 2em;
   grid-template-areas:
     "hero hero"
     "description description"
     "d-picture d-picture"
-    "products products";
+    "products products"
+    "footer footer";
 }
 .index-hero {
   grid-area: hero;
@@ -25,7 +26,7 @@ body {
 
 .index-description {
   border: 2px solid rgb(186, 219, 208);
-  border-radius: 10%;
+  border-radius: 1em;
   grid-area: description;
   display: flex;
   gap: 1em;
@@ -107,10 +108,18 @@ h1 {
 .topnav a:hover {
   color: darkgrey;
 }
+
+i.fa.fa-bars::before {
+  color: rgb(133, 120, 120);
+}
+
+/*media query for tablet*/
 @media screen and (min-width: 540px) {
+  /*navbar changes*/
   .topnav {
     overflow: hidden;
   }
+
   .topnav a {
     float: left;
     display: block;
@@ -120,8 +129,45 @@ h1 {
     display: none;
     color: white;
   }
-}
 
-i.fa.fa-bars::before {
-  color: black;
+  .motto {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 5em;
+  }
+}
+@media screen and (min-width: 900px) {
+  .index-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 20% 40% 20% 20%;
+    gap: 2em;
+    grid-template-areas:
+      "hero hero hero hero"
+      "d-picture d-picture description description"
+      "products products products products"
+      "footer footer footer footer";
+  }
+  .motto img {
+    align-self: flex-start;
+  }
+  .motto p {
+    margin: 0;
+  }
+  .index-description {
+    font-size: 1.5em;
+    border-radius: 1em;
+    margin: 0;
+  }
+
+  .topnav a {
+    background-color: rgb(186, 219, 208);
+    margin: 10px;
+  }
+  .index-products {
+    flex-wrap: nowrap;
+  }
+  .index-products img {
+    width: 25%;
+  }
 }

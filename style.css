@@ -166,6 +166,7 @@ footer p {
   }
   .motto p {
     margin: 0;
+    padding: 2em;
   }
   .index-description {
     font-size: 1.5em;
@@ -211,6 +212,7 @@ footer p {
   }
   .motto img {
     align-self: flex-start;
+    width: 10%;
   }
   .motto p {
     margin: 0;

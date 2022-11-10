@@ -5,6 +5,7 @@ body {
   color: rgb(133, 120, 120);
   margin: 0;
 }
+
 .index-main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -17,6 +18,7 @@ body {
     "products products"
     "footer footer";
 }
+
 .index-hero {
   grid-area: hero;
   font-weight: bold;
@@ -36,10 +38,12 @@ body {
   padding: 2em;
   margin: 0.5em;
 }
+
 .index-description p,
 h1 {
   margin: 0;
 }
+
 .index-description-picture {
   grid-area: d-picture;
   background-image: url("img/d-image.jpg");
@@ -112,6 +116,8 @@ h1 {
 i.fa.fa-bars::before {
   color: rgb(133, 120, 120);
 }
+
+/*footer*/
 footer {
   grid-area: footer;
   background-color: rgb(186, 219, 208);
@@ -166,7 +172,8 @@ footer p {
   }
   .motto p {
     margin: 0;
-    padding: 2em;
+    padding: 0 20px 0 10px;
+    font-size: 1.5em;
   }
   .index-description {
     font-size: 1.5em;
@@ -184,6 +191,7 @@ footer p {
   }
   .index-products {
     flex-wrap: nowrap;
+    margin: 2em;
   }
   .index-products img {
     width: 22%;
@@ -194,10 +202,9 @@ footer p {
   .index-description-picture {
     margin-left: 2em;
   }
-  .index-products {
-    margin: 2em;
-  }
 }
+
+/* media query for desktop*/
 @media screen and (min-width: 900px) {
   .index-main {
     display: grid;
@@ -214,9 +221,7 @@ footer p {
     align-self: flex-start;
     width: 10%;
   }
-  .motto p {
-    margin: 0;
-  }
+
   .index-description {
     font-size: 1.5em;
     border-radius: 1em;
